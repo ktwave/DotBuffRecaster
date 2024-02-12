@@ -1,0 +1,16 @@
+{
+  "Author": "wav",
+  "Name": "DotBuffRecaster",
+  "Punchline": "A simple 'Damege Over Time' and 'Buff Time' recast management plugin for raids.",
+  "Description": "シンプルなレイド用dot/バフ持続時間のリキャスト管理プラグイン。",
+  "InternalName": "DotBuffRecaster",
+  "Tags": [ "UI", "Recast", "Buff" ],
+  "RepoUrl": "https://github.com/ktwave/DotBuffRecaster/tree/master/DotBuffRecaster",
+  "LoadPriority": 0,
+  "AssemblyVersion": "1.0.0.0",
+  "TestingAssemblyVersion": "1.0.0.0",
+  "ApplicableVersion": "any",
+  "DalamudApiLevel": 9,
+  "DownloadLinkInstall": "https://github.com/ktwave/DotBuffRecaster/releases/download/latest/DotBuffRecaster.zip",
+  "DownloadLinkUpdate": "https://github.com/ktwave/DotBuffRecaster/releases/download/latest/DotBuffRecaster.zip"
+}
