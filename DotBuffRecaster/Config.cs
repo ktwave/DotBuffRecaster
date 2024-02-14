@@ -15,11 +15,11 @@ namespace DotBuffRecaster {
         private DalamudPluginInterface? PluginInterface;
 
         public int Version { get; set; } = 0;
-        public bool IsEnabled { get; internal set; } = false;
-        public bool IsPreview { get; internal set; } = false;
-        public float OffsetX { get; internal set; } = 0f;
-        public float OffsetY { get; internal set; } = 0f;
-        public float Scale { get; internal set; } = 100f;
+        public bool IsEnabled { get; set; } = true;
+        public float OffsetX { get; set; } = 0f;
+        public float OffsetY { get; set; } = 0f;
+        public float Scale { get; set; } = 100f;
+
         public GameFontFamilyAndSize? Font = null;
 
         public void Save() {
