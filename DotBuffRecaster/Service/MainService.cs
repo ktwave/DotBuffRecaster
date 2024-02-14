@@ -17,13 +17,14 @@ using System.ComponentModel.DataAnnotations;
 using Dalamud.Interface.Utility;
 using Dalamud.Logging;
 using Dalamud.Game.ClientState.Objects.Types;
+using static System.Net.Mime.MediaTypeNames;
 
 namespace DotBuffRecaster.Service {
     public static class MainService {
         internal static void DrawConfigWindow(ref Config config, ref bool isConfigOpen) {
             {
-                if (ImGui.Begin(Constants.Name + " Config", ref isConfigOpen, ImGuiWindowFlags.NoResize)) {
-                    ImGui.SetWindowSize(new Vector2(350, 500));
+                if (ImGui.Begin(Constants.Name + " Config", ref isConfigOpen, ImGuiWindowFlags.NoResize | ImGuiWindowFlags.AlwaysAutoResize)) {
+                    // ImGui.SetWindowSize(new Vector2(350, 300));
 
                     config.Font = GameFontFamilyAndSize.Axis36;
 
@@ -57,6 +58,17 @@ namespace DotBuffRecaster.Service {
                     ImGui.SetNextItemWidth(200f);
                     if (ImGui.DragFloat("   ", ref scale, 1, 1, 300)) {
                         config.Scale = scale;
+                    }
+
+                    ImGui.Spacing();
+                    ImGui.Separator();
+                    ImGui.Spacing();
+                    ImGui.Spacing();
+
+                    ImGui.SetCursorPosX(180f);
+                    if(ImGui.Button("閉じる(Close)")) {
+                        isConfigOpen = false;
+                        DalamudService.PluginInterface.SavePluginConfig(config);
                     }
                     ImGui.End();
 

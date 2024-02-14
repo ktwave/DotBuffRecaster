@@ -31,6 +31,7 @@ namespace DotBuffRecaster {
             PluginInterface.Create<DalamudService>();
             DalamudService.PluginInterface.UiBuilder.Draw += Draw;
             config = DalamudService.PluginInterface.GetPluginConfig() as Config ?? new Config();
+            actions = ActionService.SetActions();
 
             DalamudService.PluginInterface.UiBuilder.OpenConfigUi += delegate { isConfigOpen = true; };
             DalamudService.Framework.RunOnFrameworkThread(() => {
@@ -52,9 +53,6 @@ namespace DotBuffRecaster {
 
                 // check not login
                 if (DalamudService.ClientState.LocalPlayer == null) return;
-
-                // not in combat -> set actions
-                if (!DalamudService.Condition[ConditionFlag.InCombat]) actions = ActionService.SetActions();
 
                 // check disabled
                 if (!config.IsEnabled) return;
