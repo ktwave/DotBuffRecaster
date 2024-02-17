@@ -11,7 +11,7 @@ namespace DotBuffRecaster.Enums {
             FightOrFlight = 76, // FOF
 
             // WAR
-            StormsEye = 2477,// シュトルムブレハ
+            StormsEye = 2677,// シュトルムブレハ
 
             // GNB
             NoMercy = 1831, // ノー・マーシー

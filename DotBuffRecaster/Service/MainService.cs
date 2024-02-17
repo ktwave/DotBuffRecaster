@@ -171,7 +171,9 @@ namespace DotBuffRecaster.Service {
                                         time = playerStatuses.Where(s => s.StatusId == action.StatusId).Select(s => s.RemainingTime).FirstOrDefault();
                                     } else {
                                         var targetStatuses = GetTargetStatuses();
-                                        time = targetStatuses.Where(s => s.StatusId == action.StatusId).Select(s => s.RemainingTime).FirstOrDefault();
+                                        if(targetStatuses != null) {
+                                            time = targetStatuses.Where(s => s.StatusId == action.StatusId).Select(s => s.RemainingTime).FirstOrDefault();
+                                        }
                                     }
                                     
                                     var dispTime = time.ToString("#");
