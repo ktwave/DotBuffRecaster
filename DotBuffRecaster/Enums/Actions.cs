@@ -47,7 +47,6 @@ namespace DotBuffRecaster.Enums {
         LanceCharge = 85, // ランスチャージ
         DragonSight = 7398, // ドラゴンサイト
         
-
         // SAM
         Gekko = 7481, // 月光
         Kasha = 7482, // 花車
@@ -67,5 +66,8 @@ namespace DotBuffRecaster.Enums {
 
         // BLM
         Thunder3 = 153, // サンダガ
+
+        // Melee
+        TrueNorth = 7546,
     }
 }

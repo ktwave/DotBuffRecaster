@@ -70,6 +70,27 @@ namespace DotBuffRecaster.Service {
             a.ActionType = ActionModel.ActionType.DEBUFF;
             result.Add(a);
 
+            // Melee
+            a = new StrAction();
+            a.Action = (int)Actions.TrueNorth;
+            a.StatusId = (int)Statuses.Buff.TrueNorth;
+            a.ActionType = ActionModel.ActionType.BUFF;
+
+            a.JobId = (int)JobIds.MNK;
+            result.Add(a);
+
+            a.JobId = (int)JobIds.DRG;
+            result.Add(a);
+
+            a.JobId = (int)JobIds.NIN;
+            result.Add(a);
+
+            a.JobId = (int)JobIds.SAM;
+            result.Add(a);
+
+            a.JobId = (int)JobIds.RPR;
+            result.Add(a);
+
             // MNK
             a = new StrAction();
             a.JobId = (int)JobIds.MNK;

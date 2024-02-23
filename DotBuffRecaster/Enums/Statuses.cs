@@ -28,6 +28,9 @@ namespace DotBuffRecaster.Enums {
             Gekko = 1298, // 月光
             Kasha = 1299, // 花車
             MeikyoShisui = 1233, // 明鏡止水
+
+            // Melee
+            TrueNorth = 1250,
         }
 
         public enum DeBuff {
